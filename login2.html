@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反诈通</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/card/style.css">
+    <link rel="stylesheet" href="./css/login1.css">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="loginIn"> 
+            
+            <div class="big">
+                <div class="small">
+                    <div class="box">
+                        <div class="name">用户注册</div>
+                        <div class="login_box t">
+                            <input  type="text" class="logup_name" placeholder="输入用户名" required />
+                        </div>
+                        <div class="login_box p p1">
+                            <input type="password" class="logup_pw " placeholder="输入密码" required="required" />
+                        </div>
+                        <div class="login_box p p2">
+                            <input type="txt" class="logup_pw" placeholder="输入邮箱" required="required" />
+                        </div>
+                        <div class="login_box p p3">
+                            <input type="txt" class="logup_pw" placeholder="输入验证码" required="required" />
+                        </div>
+                        <div class="txt t1">
+                            前往登录
+                        </div>
+                        <div class="txt t2">
+                            发送验证码
+                        </div>
+                        <div class="txt1">
+                            <button class="form_button button submit">注册</button>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <div class="name">用户登录</div>
+                        <div class="login_box t">
+                            <!-- required就是不能为空 必须在css效果中有很大的作用 -->
+                            <!-- 可以简写为required -->
+                            <input type="text" class="logup_name" placeholder="输入用户名" required />
+                        </div>
+                        <div class="login_box p p1">
+                            <input type="password" class="logup_pw " placeholder="输入密码" required="required" />
+                        </div>
+                        <div class="txt">
+                            前往注册
+                        </div>
+                        <div class="txt1">
+                            <button class="form_button button submit">登录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Back">
+
+            </div>
+
+            <!-- 密码为空 -->
+            <div class="emptyA a">
+                <div class="x">
+                    <span>X</span>
+                </div>
+            </div>
+
+            <!-- 用户名为空 -->
+            <div class="emptyA c">
+                <div class="x">
+                    <span>X</span>
+                </div>
+            </div>
+            <!-- 邮箱为空 -->
+            <div class="emptyA y">
+                <div class="x">
+                    <span>X</span>
+                </div>
+            </div>
+            <!-- 验证码错误 -->
+            <div class="emptyA s">
+                <div class="x">
+                    <span>X</span>
+                </div>
+            </div>
+            <!-- 登录成功 -->
+            <div class="emptyA m">
+                <div class="q">
+                    <span>确认</span>
+                </div>
+            </div>
+            <!-- 注册成功 -->
+            <div class="emptyA z">
+                <div class="q">
+                    <span>前往登录</span>
+                </div>
+            </div>
+
+            <div class="transition" style="position: absolute; bottom: 1200px;transform:scaleX(-1) translateX(0px);">
+                <div class="endt first">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="endt second">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="endt third">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li class="floating-1"></li>
+                        <li class="floating-1"></li>
+                        <li class="floating-2"></li>
+                        <li class="floating-2"></li>
+                    </ul>
+                </div>
+                <div class="endt fourth">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li class="floating"></li>
+                        <li class="floating"></li>
+                        <li class="floating"></li>
+                        <li class="floating"></li>
+                    </ul>
+                    <span class="smile"></span>
+                    <span class="eyes"></span>
+                    <span class="cheeks"></span>
+                </div>
+                <div class="random-stars-container endt">
+                    <span class="random-stars"></span>
+                    <span class="random-stars"></span>
+                    <span class="random-stars"></span>
+                    <span class="random-stars"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/login1.js"></script>
+</body>
+
+</html>

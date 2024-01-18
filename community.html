@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反诈通</title>
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 最上面的总导航栏 -->
+    <div class="bignav">
+        <div class="nav">
+            <!-- 最左边的logo -->
+            <div class="nav-outLogo">
+                <!-- logo内部盒子 -->
+                <div class="nav-inLogo">
+                    <!-- logo -->
+                    <div class="nav-logo iconfont icon-xitonganquan">
+
+                    </div>
+                    <!-- logo旁边的文字 -->
+                    <div class="nav-txt">
+                        <!-- 中文文字 -->
+                        <div class="CN">反诈通</div>
+                        <!-- 英文文字 -->
+                        <div class="EN">wing&nbsp;of&nbsp;anti-fraud</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间的导航栏 -->
+            <div class="nav-mid">
+                <ul>
+                    <!-- 帮助 -->
+                    <li>
+                        <a class="nax-tag" href="./index.html">首页</a>
+                    </li>
+                    <!-- 学习 -->
+                    <li>
+                        <!-- 标签 -->
+                        <a class="nax-tag" href="./mStart.html">模拟</a>
+                    </li>
+                    <!-- 百科 -->
+                    <li>
+                        <a class="nax-tag" href="./cyclopedias.html">百科</a>
+                    </li>
+                    <!-- 新闻 -->
+                    <li>
+                        <a class="nax-tag" href="./community.html">社区</a>
+                    </li>
+                    <!-- 这个元素来定义滑动的线条 -->
+                    <!-- <li class="underline"></li> -->
+                </ul>
+            </div>
+            <!-- 右边的个人中心 -->
+            <div class="navPreson">
+                <!-- 链接 -->
+                <a class="" href="./center.html">
+                    <div class="personH">
+                        <!-- ID -->
+                        <div class="personID">陈东楷</div>
+                        <!-- 头像 -->
+                        <div class="personHead">
+                            <div class="close">×</div>
+                            <img src="./images/chu.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <!-- 信息 -->
+                <div class="message">
+                    <!-- 我的排行榜 -->
+                    <div class="m">
+                        <div class="mfont icon-gongnengpaihangbang iconfont"></div>
+                        <a class="mtxt">我的排行榜</a>
+                    </div>
+                    <!-- 我的错题集 -->
+                    <div class="m">
+                        <div class="mfont icon-xuexi_nor iconfont"></div>
+                        <a class="mtxt">我的错题集</a>
+                    </div>
+                    <!-- 关于反诈通 -->
+                    <div class="m">
+                        <div class="mfont icon-xitonganquan iconfont"></div>
+                        <a class="mtxt">关于反诈通</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topic-wrap">
+        <div class="wrap">
+            <input type="radio" name="tab1" value="1" id="tab-1">
+            <label for="tab-1" class="control1">
+                <p>社区</p>
+            </label><input type="radio" name="tab1" value="2" id="tab-2">
+            <label for="tab-2" class="control2">
+                <p>话题</p>
+            </label>
+            <input type="radio" name="tab1" value="3" id="tab-3">
+            <label for="tab-3" class="control3">
+                <p>创作</p>
+            </label>
+        </div>
+    </div>
+    <div class="community">
+        <div class="cartoon">
+            <div class="com-duck"><img src="images/communityduck.gif" alt=""></div>
+            <div class="cartoons">
+                <div>
+                    <div><img src="images/cartoon2.png" alt=""></div>
+                    <div><img src="images/cartoon2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <!-- <div class="artical">
+                        <div class="artical-sum">
+                            <div class="artical-title">返利拼单诈骗</div>
+                            <div class="artical-content">
+                                2023年10月8日，居民A在抖音上搭识一名陌生网友。和对方聊天过程中，对方向其推荐一拼单返利网站，日常手机端操作即可获得返利。居民A信以为真，于是在2023年10月10日根据对方的指示通过微信向网站内转账人民币480元，后发现被骗。
+                            </div>
+                            <div class="ability">
+                                <div class="like">
+                                    <span class="iconfont icon-xihuan"></span><span>点赞
+                                </span>
+                                </div>
+                                <div class="share">
+                                    <span class="iconfont icon-liuyan "></span><span>评论
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artical-detail">
+                            <div>
+                                <div>
+                                    <div class="return-com">
+                                        <div class="bread"><img src="images/bread.gif"></div>
+                                        <div class="return"><img src="images/return.png"></div>
+                                    </div>
+                                    <div class="artical-Title">${data[i].title}</div>
+                                    <div class="user">
+                                        <div class="userImg"><img src="images/user1.jpg" alt=""></div>
+                                        <div class="username">cheer up</div>
+                                    </div>
+                                    <div class="artical-Content">
+                                        ${data[i].article}
+                                    </div>
+                                    <div class="abilitys">
+                                        <div class="postId">${data[i].postId}</div>
+                                        <div class="likes">
+                                            <span class="xihuan">
+                                                                        <img src="images/xin2.png" alt="">
+                                                                    </span>
+                                            <span>${data[i].likes}</span>
+                                        </div>
+                                        <div class="shares">
+                                            <span class="liuyan"><img src="images/liuyan.png" alt=""></span><span>${data[i].comments}
+                                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+
+                                    </div>
+                                    <div class="comment-publish">
+                                        <div>
+                                            <textarea class="comment-input" placeholder="请输入你的评论"></textarea>
+                                            <div class="comment-sure">确定</div>
+                                            <div class="comment-packup">收起</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-tip"><span>你的输入为空哦~</span>
+                                        <div>确定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+            <div class="publish">
+                <div class="title-none">
+                    <div class="title-n"><img src="images/title-n.png" alt=""></div>
+                    <div class="title-b">确定</div>
+                </div>
+                <div class="title-none">
+                    <div class="title-n">
+                        <div class="title-n"><img src="images/text-n.png" alt=""></div>
+                        <div class="title-b">确定</div>
+                    </div>
+                </div>
+                <div class="title-none">
+                    <div class="title-n">
+                        <div class="title-n"><img src="images/input.png" alt=""></div>
+                        <div class="title-b">确定</div>
+                    </div>
+                </div>
+                <div class="posted">发布</div>
+                <div class="posted-box">
+                    <div class="packup">收起</div>
+                    <form action="">
+                        <input type="text" class="posted-title" placeholder="请输入标题" maxlength="20">
+                        <textarea class="posted-text" placeholder="请输入正文"></textarea>
+
+                    </form>
+                    <button class="posted-submit">发表</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- 话题投票和评论 -->
+        <div class="topics">
+            <div>
+                <div class="Topic">
+                    <!-- <div class="topic">
+                        <div class="topic-sum">
+                            <div class="voteId">2</div>
+                            <div class="top-topic">本周话题</div>
+                            <div class="top-main">你觉得自己大概率会被骗吗?</div>
+                        </div>
+                        <div class="vote">
+                            <div class="right"><span>会</span><span class="right-choose">1</span></div>
+                            <div class="false"><span>不会</span><span class="wrong-choose">2</span></div>
+                        </div>
+                        <div class="vote-result">
+                            <div>
+                                <div class="fa">
+                                    <div class="father">
+                                        <div class="son"></div>
+                                    </div>
+                                    <div class="progress">70%</div>
+                                </div>
+                                <div class="fa">
+                                    <div class="father">
+                                        <div class="son"></div>
+                                    </div>
+                                    <div class="progress">30%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="like-com">
+                            <div class="likes2">
+                                <span class="xihuan2">
+                            <img src="images/xin2.png" alt="">
+                        </span>
+                                <span>1</span>
+                            </div>
+                            <div class="shares2">
+                                <span class="liuyan2"><img src="images/liuyan.png" ></span><span>2
+                    </span>
+                            </div>
+                        </div>
+                        <div class="comment-dis">展开评论</div>
+                        <div class="topic-comment">
+                            <div>
+                                <div class="total-com">
+                                    <div class="first-com">
+                                        <div class="user-pic"><img src="images/chu.png" alt=""></div>
+                                        <div class="user-comment">
+                                            <div>
+                                                <div class="user-id">xxw</div>
+                                                <div class="opinion">蓝方</div>
+                                                <div class="commentId">1</div>
+                                                <div class="first-answer">回复</div>
+                                                <div class="reply">1</div>
+                                                <div class="dianzan"><img src="images/xin2.png" alt=""></div>
+                                            </div>
+                                            <div class="user-concre">你说得对</div>
+                                            <div class="check-comment">查看回复</div>
+                                        </div>
+                                    </div>
+                                    <div class="second-com">
+                                        <div class="user-pic2"><img src="images/chu.png" alt=""></div>
+                                        <div class="user-comment">
+                                            <div>
+                                                <div class="user-id">xxw</div>
+                                                <div class="first-answer">回复</div>
+                                                <div class="dianzan"><img src="images/xin2.png" alt=""></div>
+                                            </div>
+                                            <div class="user-concre">你说得不对</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total-com">
+                                    <div class="first-com">
+                                        <div class="user-pic"><img src="images/chu.png" alt=""></div>
+                                        <div class="user-comment">
+                                            <div class="user-id">xxw</div>
+                                            <div class="user-concre">你说得对</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="total-com">
+                                    <div class="first-com">
+                                        <div class="user-pic"><img src="images/chu.png" alt=""></div>
+                                        <div class="user-comment">
+                                            <div class="user-id">xxw</div>
+                                            <div class="user-concre">你说得对</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="total-com">
+                                    <div class="first-com">
+                                        <div class="user-pic"><img src="images/chu.png" alt=""></div>
+                                        <div class="user-comment">
+                                            <div class="user-id">xxw</div>
+                                            <div class="user-concre">你说得对</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="creative">
+            <div>
+                <div>
+                    <!-- <div class="artical">
+                        <div class="artical-sum">
+                            <div class="artical-title">${data[i].title}</div>
+                            <div class="artical-content">
+                                ${data[i].article}
+                            </div>
+                            <div class="ability">
+                                <div class="like">
+                                    <span class="iconfont icon-xihuan"></span><span>点赞
+                            </span>
+                                </div>
+                                <div class="share">
+                                    <span class="iconfont icon-liuyan "></span><span>评论
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="artical-detail">
+                            <div>
+                                <div>
+                                    <div class="return-com">
+                                        <div class="bread"><img src="images/bread.gif"></div>
+                                        <div class="return"><img src="images/return.png"></div>
+                                    </div>
+                                    <div class="artical-Title">${data[i].title}</div>
+                                    <div class="user">
+                                        <div class="userImg"><img src="images/user1.jpg" alt=""></div>
+                                        <div class="username">cheer up</div>
+                                    </div>
+                                    <div class="artical-Content">
+                                        ${data[i].article}
+                                    </div>
+                                    <div class="abilitys">
+                                        <div class="postId">${data[i].postId}</div>
+                                        <div class="likes">
+                                            <span class="xihuan">
+                                                                    <img src="images/xin2.png" alt="">
+                                                                </span>
+                                            <span>${data[i].likes}</span>
+                                        </div>
+                                        <div class="shares">
+                                            <span class="liuyan"><img src="images/liuyan.png" alt=""></span><span>${data[i].comments}
+                                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+
+                                    </div>
+                                    <div class="comment-publish">
+                                        <div>
+                                            <textarea class="comment-input" placeholder="请输入你的评论"></textarea>
+                                            <div class="comment-sure">确定</div>
+                                            <div class="comment-packup">收起</div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-tip"><span>你的输入为空哦~</span>
+                                        <div>确定</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="top-publish">
+        <div>
+            <textarea class="top-input" placeholder="请输入你的评论"></textarea>
+            <div class="top-sure">确定</div>
+            <div class="top-packup">收起</div>
+        </div>
+    </div>
+    <div class="top-tip"><span>你的输入为空哦~</span>
+        <div>确定</div>
+    </div>
+    <div class="revote">
+        <div>
+            <div><img src="images/revote1.png" alt=""></div>
+            <div class="revote-sure">确定</div>
+        </div>
+    </div>
+    <div class="voted">
+        <div>
+            <div><img src="images/voted1.png" alt=""></div>
+            <div class="revote-sure">确定</div>
+        </div>
+    </div>
+    <div class="forkGood">
+        <div class="closed">
+            <img src="./images/close.png" alt="">
+        </div>
+        <div class="txt">
+            <span>你确定要将其保存到你的草稿箱嘛</span>
+        </div>
+        <div class="accept">
+            
+        </div>
+    </div>
+    <!-- <div class="duck">
+        <div class="duck1"><img src="images/deck.gif" alt=""></div>
+        <div class="duck2"><img src="images/deck.gif" alt=""></div>
+        <div class="duck3"><img src="images/deck.gif" alt=""></div>
+    </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/community.js"></script>
+    <script src="js/topic.js"></script>
+    <script src="js/creation.js"></script>
+</body>
+
+</html>

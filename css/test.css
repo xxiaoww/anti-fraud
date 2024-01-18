@@ -1,0 +1,931 @@
+
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+body {
+    background: #eee;
+    font-family: '幼圆';
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.cardBack{
+    width: 100%;
+    height: 745px;
+    background-color: #9eaf9c;
+    background-color: #3a584e;
+    /* background-image: url(../../images/cardback2.png); */
+}
+.cardInterface{
+    width: 670px;
+    height: 726px;
+    /* background-color: #bda866; */
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+}
+.cardInterface>.nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 333333;
+    height: 60px;
+    right: 0;
+    /* background-color: #fff; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cardInterface .nav-outLogo {
+    position: absolute;
+    left: 20px;
+    width: 150px;
+    height: 50px;
+    /* background-color: #000; */
+}
+
+.cardInterface .nav-inLogo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-inLogo>.nav-logo {
+    font-size: 35px;
+    color: #000;
+    position: absolute;
+    left: 30px;
+    top: 14px;
+}
+
+.nav-inLogo>.nav-txt {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 75px;
+    width: 200px;
+    height: 100%;
+    top: 15px;
+}
+
+.nav-txt>.CN {
+    color: #000;
+    font-family: "幼圆" !important;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.nav-txt>.EN {
+    color: #000;
+    font-family: "Blackadder ITC";
+    font-weight: 900;
+    font-size: 11px;
+}
+
+.cardInterface .nav-mid {
+    position: relative;
+    left: 70px;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cardInterface .nav-mid>ul {
+    /* 相对定位 */
+    position: relative;
+    /* 弹性布局 */
+    display: flex;
+    /* 让子元素平均分配宽度 */
+    justify-content: space-around;
+    width: 650px;
+    height: 100%;
+}
+
+.cardInterface .nav-mid>ul>li{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-mid>ul>li>a{
+    /* 因为a元素是行内元素 必须将其转为行内块或者块级才能设置宽度和高度 */
+    display: block;
+    width: 50px;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    font-family: "幼圆" !important;
+    font-weight: 900;
+    font-size: 20px;
+    transition: all .1s;
+    /* border-bottom: 5px solid #365174; */
+}
+.nav-mid>ul>li:hover>a{
+    height: 93%;
+    border-bottom: 5px solid #194414;
+}
+
+
+.nav-mid li>ol {
+    width: 85%;
+    /* width: 120%; */
+    background-color: #fff;
+    opacity: 0;
+    position: relative;
+    left: 23px;
+    /* visibility: hidden; */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5% !important;
+    border-bottom-right-radius: 5% !important;
+    /* 让盒子先沿着y轴缩放到0 也就是隐藏了 */
+    /* transform: scaleY(0); */
+    /* 我们需要将盒子从上面滑动下来 设置一下缩放的中心点即可 设置到最上面的中间位置 */
+    transform-origin: 50% 0;
+    /* 设置过渡 */
+    transition: all 0.2s;
+}
+.nav-mid>ul>li:hover ol{
+    opacity: 1;
+    visibility: visible;
+
+}
+.nax-tag {
+    position: relative;
+    left: 10px;
+}
+
+.nav-mid li>ol>li {
+    height: 40px;
+    transition: background-color 0.2s ease-in-out;
+    /* border-bottom:10px solid #365174; */
+}
+
+.nav-mid li>ol>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    color: #000;
+    font-family: "幼圆" !important;
+    font-size: 16px;
+    position: relative;
+    transition: font-size 0.2s ease-in-out;
+    bottom: 15px;
+}
+
+.nav-mid li>ol>li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-mid li>ol>li>a:hover {
+    /* font-size: 1px; */
+}
+
+
+.nav-mid>ul .underline {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 50px !important;
+    height: 6px !important;
+    /* 设置一下盒子的左上角和右上角的圆角 */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #365174;
+    /* 加过渡 */
+    transition: all 0.5s;
+    /* 现在有个小问题 我们一起看看 ne
+  /* 就是这个问题 这个线条有点影响鼠标移入li这个效果 */
+    /* 这个属性就可以解决这个问题 就貌似这个元素你能看见 但是鼠标是点击不到了 现在鼠标放到线条也没事了 */
+    pointer-events: none;
+}
+
+.nav-mid>ul>li:nth-child(2):hover~.underline {
+    left: 148px;
+}
+
+.nav-mid>ul>li:nth-child(3):hover~.underline {
+    left: 258px;
+}
+
+.nav-mid>ul>li:nth-child(4):hover~.underline {
+    left: 363px;
+}
+
+.nav-mid>ul>li:nth-child(5):hover~.underline {
+    left: 473px;
+}
+
+.nav-mid>ul>li:nth-child(6):hover~.underline {
+    left: 580px;
+}
+
+.cardInterface .mainNavR {
+    position: absolute;
+    right: 225px;
+    top: 20px;
+}
+
+/* 导航栏右上角的搜索 */
+.mainNavR .search {
+    font-size: 22px !important;
+    color: #365174;
+    display: inline-block;
+    /* width: 30px; */
+    position: relative;
+    margin-right: 30px;
+    font-family: "幼圆";
+    text-align: center;
+    vertical-align: middle;
+    transition: color .3s;
+}
+
+.mainNavR .search.icon-sousuo::before {
+    position: relative;
+    right: 50px;
+    font-size: 20px;
+}
+
+/* 导航栏右上角的搜索大框 */
+.mainNavR .searchBox {
+    position: absolute;
+    right: 50px;
+    top: -5px;
+    /* position: relative;
+    right: 300px;
+    top: -5px; */
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    color: #474747;
+    /* color: #ad2b2b; */
+    line-height: 34px;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    transform: translateX(50%);
+    transition: visibility .3s, opacity .3s, transform .3s;
+}
+
+/* 搜索框 */
+.mainNavR .searchTxt {
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 2px #365174;
+    border-radius: 50px;
+    padding: 0 8px;
+    width: 200px;
+}
+
+/* 搜索框的文字 */
+.mainNavR .searchTxt>input {
+    outline: none;
+    border: 8px !important;
+    display: block;
+    width: 80%;
+    height: auto;
+    position: relative;
+    top: 5px;
+    line-height: normal;
+}
+
+.mainNavR .searchTxt>input:focus::placeholder {
+    font-size: 0px;
+}
+
+.mainNavR .searchTxt>input::placeholder {
+    font-family: "幼圆";
+    font-weight: 600;
+    font-size: 15px;
+    color: #365174;
+}
+/* 放大镜的提交按钮 */
+.searchSubmit {
+    background: none;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+    min-width: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "xfont" !important;
+    font-style: normal;
+    position: relative;
+    right: 50px;
+    top: 2px;
+}
+
+.navPreson {
+    z-index: 999;
+    position: absolute;
+    right: 70px;
+    top: 0px;
+    width: 200px;
+    height: 60px;
+    /* background-color: linear-gradient(to right, #ff0000, #0000ff); */
+    transition: all .5s ease;
+    transition: width .5s,height .5s,background-image .5s,background-size .5s;
+    border-radius: 20px;
+
+}
+/* 
+.navPreson:hover {
+    width: 290px;
+    height: 400px;
+    border: 3px solid #000;
+    background-color: #6e8da9;
+    background-image: url(../images/cardBB.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.navPreson:hover .personID {
+    left: 8px;
+    color: #000;
+    font-family: "黑体";
+    top: 115px;
+}
+
+.navPreson:hover .personID:hover {
+    text-decoration: underline;
+}
+
+.navPreson:hover .personHead {
+    position: relative;
+    top: 60px;
+    right: 105px;
+} */
+
+.personHead .close {
+    display: none;
+    /* background-color: #bfa; */
+    z-index: 2;
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    color: #000;
+    top: 15%;
+    left: 23%;
+    /* transform: translate(-50%, -56%); */
+}
+
+/* .personHead:hover .close {
+    display: block;
+    color: #000;
+    top: 15%;
+    left: 23%;
+}
+
+.navPreson:hover .personHead>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+.navPreson:hover .message {
+    visibility: visible;
+    opacity: 1;
+    bottom: 190px;
+    left: 100px;
+} */
+
+.navPreson>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.personH {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.personID {
+    top: 2px;
+    right: 0;
+    position: relative;
+    margin-top: 8px;
+    margin-right: 50px;
+    font-family: "幼圆";
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    transition: all 0.5s;
+}
+
+.personHead {
+    transition: all .5s ease;
+    position: relative;
+    top: 7px;
+    right: 25px;
+}
+
+.personHead>input {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    /* cursor: pointer; */
+}
+
+.personHead>img {
+    position: relative;
+    top: 0px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* 放大镜的图标字体 */
+.searchSubmit>span {
+    position: relative;
+    right: 4px;
+    font-size: 20px !important;
+}
+.message {
+    position: relative;
+    flex-direction: column;
+    bottom: 30px;
+    left: 30px;
+    /* background-color: #bfa; */
+    width: 150px;
+    /* height: 300px; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    display: flex;
+    line-height: 20px;
+    flex-wrap: wrap;
+}
+
+.message>.m {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 6px;
+    line-height: 30px;
+}
+
+.message .mtxt {
+    font-size: 14px;
+    font-family: "黑体";
+    font-weight: 600;
+    color: #000;
+}
+
+.message .mtxt:hover {
+    text-decoration: underline;
+    /* cursor: url('../../images/whthencr.cur'), auto; */
+}
+
+.message .mfont {
+    font-size: 19px;
+    color: #000;
+    margin-right: 5px;
+}
+.exp{
+    position: absolute;
+    right:150px;
+    top: 250px;
+    font-family: "幼圆";
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 50px;
+    letter-spacing: 10px; /* 调整字间距的值 */
+}
+.nav-mid>ul>li:nth-child(2)>a{
+    height: 93%;
+    border-bottom: 5px solid #194414 !important;
+}
+.bigCard{
+    height: 150px;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    /* background-color: #231402; */
+}
+
+.statsIn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+    height: 150px;
+}
+.statsIn>.cardS{
+    height: 100%;
+    /* background-color: #fff; */
+    width: 140px;
+    color: #f6f3bd;
+    font-size: 20px;
+    font-family: '幼圆';
+    font-weight: 500;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cardS>.s{
+    position: relative;
+    cursor: pointer;
+    top:65px;
+    margin: 0 auto;
+}
+.cardS>.i{
+    /* color: yellow; */
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    /* left: 15px; */
+    top:50px;
+    font-size: 60px;
+    --gradient-start: 50; /* 定义一个变量并赋值为需要的百分比 */
+    --gradient-stop:50;
+    transition: all .5s;
+    background: linear-gradient(to top, yellow calc(var(--gradient-start) * 1%), #cdcdcd calc(var(--gradient-stop) * 1%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.statsOut{
+    width: 100%;
+    height: 150px;
+}
+
+.storyOut{
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+    height: 250px;
+}
+.storyIn{
+    width: 550px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+}
+.storyIn>span{
+    line-height: 30px;
+    color: #a0af9c;
+    font-family: '幼圆';
+    font-weight: 600;
+    font-size: 20px;
+}
+.underOut{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    bottom: 130px;
+    margin: 0 auto;   
+    border: 7px solid #000;
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px 5px rgba(0,0,0,.3);
+    background-color: #34584e;
+    background-image: url(../../images/cardBackB1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.characterOut{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    left: 310px;
+    bottom: 120px;
+}
+
+.characterIn{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.characterIn>span{
+    line-height: 30px;
+    color: #382a14;
+    font-family: '幼圆';
+    font-weight: 600;
+    font-size: 25px;
+}
+.cardFoot{
+    width: 670px;
+    height: 50px;
+    position: absolute;
+    bottom: -6px;
+    /* background-color: #231402; */
+}
+.card {
+    position: relative;
+    top: 350px;
+    left: 200px;
+    transition: all 0.5s;
+    width: 350px;
+    height: 350px;
+    margin-top: -290px;
+    margin-left: -600px;
+    float: left;
+    perspective: 500px;
+    transform-origin: center center;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* card-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.content.active {
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
+.content.act {
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    line-height: 30px;
+    color: #34584e;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    /* border: 7px solid #000; */
+    /* border-radius: 20px; */
+    outline: 7px solid black;
+    outline-offset: 5px;
+    /* box-shadow: 0 0 0 10px rgba(0, 0, 0, 1); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.front{
+    right:2px;
+}
+
+.back {
+    /* background: #03446A; */
+    background-color: #34584e;
+    background-image: url(../../images/cardBackB1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.front>span,.back>span{
+    position: relative;
+    top: 50px;
+    transition: all .5s;
+}
+
+.front>img{
+    transform: scale(0.8);
+}
+.front>.eye{
+    position: relative;
+    bottom: 360px;
+    /* background-color: #bfa; */
+}
+
+.storyFront.hid{
+    opacity: 0;
+}
+.cardInterface>.Back>img{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    left: 30px;
+    transition: all .2s;
+    transform: scale(1);
+}
+.cardInterface>.Back{
+    position: relative;
+    top: 120px;
+    left:-350px;
+}
+.cardInterface>.Back>img:hover{
+    transform: scale(1.2);
+}
+.cardInterface>.bigCard{
+    transition: all 2s;
+    display: none;
+}
+.cardInterface>.card{
+    transition: all 2s;
+    display: none;
+    /* background-color: #bfa; */
+}
+.cardInterface>.cl{
+    transition: all 2s;
+    position: relative;
+    top: 280px;
+    left:-300px;
+}
+.cardInterface>.cl>img{
+    width: 500px;
+    height: 350px;
+}
+.cardInterface>.txt{
+    transition: all 2s;
+    width: 700px;
+    height: 600px;
+    position: relative;
+    left:200px;
+    top: -300px;
+    /* border: 10px solid #000; */
+    /* border-radius: 20px; */
+    background-image: url(../../images/block.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: #fff; */
+}
+.cardInterface .txt_t{
+    width: 350px;
+    position: absolute;
+    left: 220px;
+    top: 330px;
+}
+.cardInterface>.txt span{
+    position: relative;
+    top:30px;
+    right: 25px;
+    line-height: 30px;
+    color: #382a14;
+    font-family: '幼圆';
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.cardInterface>.st{
+    cursor: pointer;
+    width: 150px;
+    height: 145px;
+    /* border: 5px solid #000; */
+    /* border-radius: 10px; */
+    /* background-color: #f6f3bd; */
+    background-image: url(../../images//start.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 900px;
+    top: -650px;
+}
+
+
+
+.cardInterface>.st span,.cardInterface>.stittle span{
+    color: #000;
+    font-family: '华文琥珀';
+    /* font-weight: 600; */
+    font-size: 25px;
+}
+.cardInterface>.stittle{
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    /* border: 5px solid #000; */
+    border-radius: 10px;
+    /* background-color: #34584e; */
+    position: relative;
+    left:600px;
+    top: 300px;
+}
+.cardInterface>.stittle>div{
+    position: relative;
+    left: 50px;
+    top: 18px;
+}
+.cardInterface>.stittle span{
+    font-size: 50px;
+    font-family: "华文琥珀";
+}
+.cardInterface>.end{
+    display: none;
+    width: 700px;
+    height:500px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 150px;
+    background-color: #5992b0;
+}
+.cardInterface>.end .endT1,.cardInterface>.end .endT2{
+    /* display: none; */
+    color: #fff;
+    font-family: '华文琥珀';
+    /* font-weight: 600; */
+    font-size: 35px;
+    position: absolute;
+    left: 30px;
+    top: 40px;
+}
+.cardInterface>.end .endT2{
+    top: 170px;
+}
+.cardInterface>.end .endTxt{
+    /* display: none; */
+    position: absolute;
+    left: 30px;
+    top:100px;
+}
+
+.cardInterface>.end .t{
+    color: #fff;
+    font-family: '幼圆';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cardInterface>.end .endIndex{
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    left: 60px;
+    top: 220px;
+    /* background-color: #bfa; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardInterface>.end .endIndex>div{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.cardInterface>.end .endIndex .name{
+    position: relative;
+    left: 30px;
+    color: #fff;
+    font-family: '幼圆';
+    font-size: 20px;
+    font-weight: 600;
+}
+.cardInterface>.end .endIndex .grade{
+    position: relative;
+    left: 30px;
+    color: #fff;
+    font-family: '幼圆';
+    font-size: 18px;
+    font-weight: 600;
+}
+.cardc>.carde1>img,.cardc>.carde2>img{
+    width:300px;
+    height: 160px;
+}
+.cardc>.carde1{
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+    z-index: 2;
+    transform: translateX(0);
+    transition: all 1s;
+}
+.cardc>.carde2{
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+.cardc>.e{
+    position: absolute;
+    bottom: 98px;
+    z-index: 3;
+    left: 330px;
+    cursor: pointer;
+}
+.cardc>.e>span{
+    color: #000;
+    font-family: '华文琥珀';
+    font-size: 25px;
+}

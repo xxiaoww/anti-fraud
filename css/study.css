@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #365174;
+    font-weight: bold;
+    font-family: 华文楷体;
+}
+
+.study_bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -3;
+    background-image: url(../images/study_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.study {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 华文楷体;
+    margin-bottom: 100px;
+}
+
+.month {
+    display: flex;
+    justify-content: center;
+}
+
+.everyday {
+    padding: 20px 0;
+}
+
+.clockin {
+    position: fixed;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.study>div:first-of-type {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    color: #365174;
+}
+
+.stu_plan {
+    width: 500px;
+    height: 200px;
+    /* background-image: url(../images/plan2.png); */
+    /* background-size: 100% 100%; */
+    /* background-size: auto 100%;
+    background-repeat: no-repeat; */
+}
+
+.stu_plan img {
+    width: 100%;
+    height: 100%;
+}
+
+.stu_que {
+    width: 500px;
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.stu_que div {
+    text-align: left;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.sub_btn {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: #365174;
+    color: #fff;
+    font-size: 22px;
+    font-family: 华文楷体;
+    margin-left: 40%;
+    margin-bottom: 50px;
+}
+
+.stu_answer {
+    width: 800px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.exam_q {
+    padding: 30px;
+}
+
+.exam_text {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.exam_q label {
+    display: block;
+    margin-top: 10px;
+}
+
+.exam_q input {
+    visibility: hidden;
+}
+
+.exam_q span {
+    text-align: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #365174;
+}
+
+.exam_q span:hover {
+    background-color: #769bd3;
+}
+
+.exam_q label:hover span {
+    background-color: #769bd3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 333333;
+    height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-outLogo {
+    position: absolute;
+    left: 20px;
+    width: 150px;
+    height: 50px;
+    /* background-color: #000; */
+}
+
+.nav-inLogo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-inLogo>.nav-logo {
+    font-size: 35px;
+    color: #36517d;
+    position: absolute;
+    left: 30px;
+    top: 14px;
+}
+
+.nav-inLogo>.nav-txt {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 75px;
+    width: 200px;
+    height: 100%;
+    top: 15px;
+}
+
+.nav-txt>.CN {
+    color: #365174;
+    font-family: "华文楷体" !important;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.nav-txt>.EN {
+    color: #365174;
+    font-family: "Blackadder ITC";
+    font-weight: 900;
+    font-size: 11px;
+}
+
+.nav-mid {
+    position: relative;
+    left: 70px;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav-mid>ul {
+    /* 相对定位 */
+    position: relative;
+    /* 弹性布局 */
+    display: flex;
+    /* 让子元素平均分配宽度 */
+    justify-content: space-around;
+    width: 650px;
+    height: 100%;
+}
+
+.nav-mid>ul>li {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-mid li>a {
+    /* 因为a元素是行内元素 必须将其转为行内块或者块级才能设置宽度和高度 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    color: #365174;
+    font-family: "华文楷体" !important;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.nav-mid li>ol {
+    width: 100%;
+    width: 120%;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5% !important;
+    border-bottom-right-radius: 5% !important;
+    /* 让盒子先沿着y轴缩放到0 也就是隐藏了 */
+    transform: scaleY(0);
+    /* 我们需要将盒子从上面滑动下来 设置一下缩放的中心点即可 设置到最上面的中间位置 */
+    transform-origin: 50% 0;
+    /* 设置过渡 */
+    transition: all 0.6s;
+
+}
+
+.nax-tag {
+    position: relative;
+    left: 10px;
+}
+
+.nav-mid li>ol>li {
+    height: 40px;
+    transition: background-color 0.2s ease-in-out;
+    border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.nav-mid li>ol>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    color: #365174;
+    font-family: "华文楷体" !important;
+    font-size: 16px;
+    position: relative;
+    transition: font-size 0.2s ease-in-out;
+    bottom: 15px;
+}
+
+.nav-mid li>ol>li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-mid li>ol>li>a:hover {
+    font-size: 18px;
+}
+
+.nav-mid>ul>li:hover ol {
+    transform: scaleY(1);
+}
+
+.nav-mid>ul .underline {
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 50px !important;
+    height: 6px !important;
+    /* 设置一下盒子的左上角和右上角的圆角 */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #365174;
+    /* 加过渡 */
+    transition: all 0.5s;
+    /* 现在有个小问题 我们一起看看 ne
+  /* 就是这个问题 这个线条有点影响鼠标移入li这个效果 */
+    /* 这个属性就可以解决这个问题 就貌似这个元素你能看见 但是鼠标是点击不到了 现在鼠标放到线条也没事了 */
+    pointer-events: none;
+}
+
+.nav-mid>ul>li:nth-child(2):hover~.underline {
+    left: 148px;
+}
+
+.nav-mid>ul>li:nth-child(3):hover~.underline {
+    left: 258px;
+}
+
+.nav-mid>ul>li:nth-child(4):hover~.underline {
+    left: 363px;
+}
+
+.nav-mid>ul>li:nth-child(5):hover~.underline {
+    left: 473px;
+}
+
+.nav-mid>ul>li:nth-child(6):hover~.underline {
+    left: 580px;
+}
+
+.mainNavR {
+    position: absolute;
+    right: 225px;
+    top: 20px;
+}
+
+/* 导航栏右上角的搜索 */
+.mainNavR .search {
+    font-size: 22px !important;
+    color: #365174;
+    display: inline-block;
+    /* width: 30px; */
+    position: relative;
+    margin-right: 30px;
+    font-family: "华文楷体";
+    text-align: center;
+    vertical-align: middle;
+    transition: color .3s;
+}
+
+.mainNavR .search.icon-sousuo::before {
+    position: relative;
+    right: 50px;
+    font-size: 20px;
+}
+
+/* 导航栏右上角的搜索大框 */
+.mainNavR .searchBox {
+    position: absolute;
+    right: 50px;
+    top: -5px;
+    /* position: relative;
+    right: 300px;
+    top: -5px; */
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    color: #474747;
+    /* color: #ad2b2b; */
+    line-height: 34px;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    transform: translateX(50%);
+    transition: visibility .3s, opacity .3s, transform .3s;
+}
+
+/* 搜索框 */
+.mainNavR .searchTxt {
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border: solid 2px #365174;
+    border-radius: 50px;
+    padding: 0 8px;
+    width: 200px;
+}
+
+/* 搜索框的文字 */
+.mainNavR .searchTxt>input {
+    outline: none;
+    border: 8px !important;
+    display: block;
+    width: 80%;
+    height: auto;
+    position: relative;
+    top: 5px;
+    line-height: normal;
+}
+
+.mainNavR .searchTxt>input:focus::placeholder {
+    font-size: 0px;
+}
+
+.mainNavR .searchTxt>input::placeholder {
+    font-family: "华文楷体";
+    font-weight: 600;
+    font-size: 15px;
+    color: #365174;
+}
+
+cursor
+
+/* 放大镜的提交按钮 */
+.searchSubmit {
+    background: none;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+    min-width: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "xfont" !important;
+    font-style: normal;
+    position: relative;
+    right: 50px;
+    top: 2px;
+}
+
+.navPreson {
+    z-index: 999;
+    position: absolute;
+    right: 70px;
+    top: 0px;
+    width: 200px;
+    height: 60px;
+    /* background-color: linear-gradient(to right, #ff0000, #0000ff); */
+    transition: all .5s ease;
+    border-radius: 20px;
+}
+
+.navPreson:hover {
+    width: 290px;
+    height: 380px;
+    background-color: #36517d;
+    background-image: url(../../images/cardBack.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.navPreson:hover .personID {
+    left: 8px;
+    color: #f1f8ff;
+    top: 110px;
+}
+
+.navPreson:hover .personID:hover {
+    text-decoration: underline;
+}
+
+.navPreson:hover .personHead {
+    position: relative;
+    top: 60px;
+    right: 105px;
+}
+
+.personHead .close {
+    display: none;
+    /* background-color: #bfa; */
+    z-index: 2;
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    color: #36517d;
+    top: 15%;
+    left: 23%;
+    /* transform: translate(-50%, -56%); */
+}
+
+.personHead:hover .close {
+    display: block;
+    color: #fff;
+    top: 15%;
+    left: 23%;
+}
+
+.navPreson:hover .personHead>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+.navPreson:hover .message {
+    visibility: visible;
+    opacity: 1;
+    bottom: 190px;
+    left: 100px;
+}
+
+.navPreson>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.personH {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.personID {
+    top: 0;
+    right: 0;
+    position: relative;
+    margin-top: 8px;
+    margin-right: 50px;
+    font-family: "华文楷体";
+    font-weight: 600;
+    font-size: 20px;
+    color: #365174;
+    transition: all 0.5s;
+}
+
+.personHead {
+    transition: all .5s ease;
+    position: relative;
+    top: 3px;
+    right: 15px;
+}
+
+.personHead>input {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    /* cursor: pointer; */
+}
+
+.personHead>img {
+    position: relative;
+    top: 0px;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+/* 放大镜的图标字体 */
+.searchSubmit>span {
+    position: relative;
+    right: 4px;
+    font-size: 20px !important;
+}

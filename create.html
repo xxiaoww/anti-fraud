@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反诈通</title>
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/create.css">
+    <link rel="stylesheet" href="./css/font1/iconfont.css">
+    <script src="https://cdn.jsdelivr.net/npm/@antv/g6@latest/dist/g6.min.js"></script>
+</head>
+
+<body>
+    <!-- 选择模式 -->
+    <div class="change" value="default">
+
+    </div>
+    <div id="container">
+        <div id="graphContainer"></div>
+        <!-- 最上面的总导航栏 -->
+        <div class="nav">
+            <!-- 最左边的logo -->
+            <div class="nav-outLogo">
+                <!-- logo内部盒子 -->
+                <div class="nav-inLogo">
+                    <!-- logo -->
+                    <div class="nav-logo iconfont icon-xitonganquan">
+
+                    </div>
+                    <!-- logo旁边的文字 -->
+                    <div class="nav-txt">
+                        <!-- 中文文字 -->
+                        <div class="CN">反诈通</div>
+                        <!-- 英文文字 -->
+                        <div class="EN">wing&nbsp;of&nbsp;anti-fraud</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间的导航栏 -->
+            <div class="nav-mid">
+                <ul>
+                    <!-- 帮助 -->
+                    <li>
+                        <a class="nax-tag" href="./index.html">首页</a>
+                    </li>
+                    <!-- 学习 -->
+                    <li>
+                        <!-- 标签 -->
+                        <a class="nax-tag" href="./game.html">模拟</a>
+                    </li>
+                    <!-- 百科 -->
+                    <li>
+                        <a class="nax-tag" href="./cyclopedias.html">百科</a>
+                    </li>
+                    <!-- 新闻 -->
+                    <li>
+                        <a class="nax-tag" href="./community.html">社区</a>
+                    </li>
+                    <!-- 这个元素来定义滑动的线条 -->
+                    <!-- <li class="underline"></li> -->
+                </ul>
+            </div>
+            <!-- 右边的个人中心 -->
+            <div class="navPreson">
+                <!-- 链接 -->
+                <a class="" href="">
+                    <div class="personH">
+                        <!-- ID -->
+                        <div class="personID">陈东楷</div>
+                        <!-- 头像 -->
+                        <div class="personHead">
+                            <div class="close">×</div>
+                            <img src="./images/chu.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <!-- 信息 -->
+                <div class="message">
+                    <!-- 我的排行榜 -->
+                    <div class="m">
+                        <div class="mfont icon-gongnengpaihangbang iconfont"></div>
+                        <a class="mtxt">我的排行榜</a>
+                    </div>
+                    <!-- 我的错题集 -->
+                    <div class="m">
+                        <div class="mfont icon-xuexi_nor iconfont"></div>
+                        <a class="mtxt">我的错题集</a>
+                    </div>
+                    <!-- 关于反诈通 -->
+                    <div class="m">
+                        <div class="mfont icon-xitonganquan iconfont"></div>
+                        <a class="mtxt">关于反诈通</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 眼睛 -->
+            <div class="eye icon-yanjing iconfont">
+
+            </div>
+        </div>
+        <!-- <div class="zhuang">
+            <div class="txt">
+                <span>状态说明</span>
+            </div>
+            进行选择的tab
+            <div class="tab">
+                    <div class="see">
+                        <span>预览</span>
+                    </div>
+                    <div class="edit">
+                        <span>编辑</span>
+                    </div>
+            </div>
+            tab下的内容
+            <div>
+
+            </div>
+        </div> -->
+        <!-- 头部 包括了剧本名字、背景信息-->
+        <div class="base">
+            <img src="./images/amplify.gif" alt="">
+        </div>
+        <!-- 填写信息的：即剧本名字、背景、以及指标、 -->
+        <div class="cont">
+            <!-- 这里只是一个关闭按钮 -->
+            <div class="closed">
+                <img src="./images/close.png" alt="">
+            </div>
+            <!-- 剧本标题及背景 -->
+            <div class="baseIn">
+
+                <div class="tittle">
+                    <label for="">标题：</label><textarea name="" id="tittle" cols="5" rows="2"></textarea>
+                </div>
+
+                <div class="back">
+                    <label for="">背景：</label><textarea name="" id="back" cols="30" rows="10"></textarea>
+                </div>
+
+            </div>
+            <!-- 确定按钮 -->
+            <div class="good">
+
+            </div>
+            <!-- 指标选择 -->
+            <div class="indexSelect">
+
+            </div>
+        </div>
+        <!-- 指标选择 -->
+        <div class="index">
+            <div class="closed">
+                <img src="./images/close.png" alt="">
+            </div>
+            <!-- 指标个数选择 -->
+            <div class="in">
+                <!-- 文字 -->
+                <div class="inTxt">
+                    <span>你的剧本指标个数(最多4个)</span>
+                </div>
+                <!-- 选择多少个指标 -->
+                <div class="inSelect">
+                    <input type="radio" id="0" name="options" value="0" onchange="showTextFields(this.value)">
+                    <label for="option0">0</label>
+                    <input type="radio" id="1" name="options" value="1" onchange="showTextFields(this.value)">
+                    <label for="option1">1</label>
+                    <input type="radio" id="2" name="options" value="2" onchange="showTextFields(this.value)">
+                    <label for="option2">2</label>
+                    <input type="radio" id="3" name="options" value="3" onchange="showTextFields(this.value)">
+                    <label for="option3">3</label>
+                    <input type="radio" id="4" name="options" value="4" onchange="showTextFields(this.value)">
+                    <label for="option4">4</label>
+                </div>
+                <!-- 确认按钮 -->
+                <div class="m">
+
+                </div>
+                <!-- 那个指标的那些文本框 -->
+                <div id="textFields">
+
+                </div>
+            </div>
+        </div>
+        <!-- 显示框 -->
+        <div class="fillOut">
+            <div class="fillIn">
+                <div class="closed">
+                    <img src="./images/close.png" alt="">
+                </div>
+                <div class="opened">
+                    <img src="./images/left.png" alt="">
+                </div>
+                <div class="write">
+                    <!-- <textarea rows="4" class="scriptid" placeholder="卡牌id" cols="50"></textarea> -->
+                    <!-- 卡牌id -->
+                    <div class="scriptid">
+                        <label for="">卡牌id:</label><input type="text">
+                    </div>
+                    <!-- 卡牌剧情 -->
+                    <div class="word">
+                        <label for="">卡牌剧情:</label><textarea rows="4" cols="50"></textarea>
+                    </div>
+                    <!-- 节点设置 -->
+                    <div class="choice">
+                        <!-- 添加左节点信息 -->
+                        <div class="left c">
+                            <div class="txt">左节点</div>
+                            <!--左节点选择的信息 -->
+                            <div class="choiceMsg">
+                                <textarea rows="4" cols="17" placeholder="左卡牌的抉择"></textarea>
+                            </div>
+                            <!-- 4个指标的变化 -->
+                            <div class="influence">
+                                <div class="i">
+                                    <label class="i1" for="">指标1:</label><input type="text" class="influence1">
+                                    <label class="i2" for="">指标2:</label><input type="text" class="influence2">
+                                </div>
+                                <div class="i">
+                                    <label class="i3" for="">指标3:</label><input type="text" class="influence3">
+                                    <label class="i4" for="">指标4:</label><input type="text" class="influence4">
+                                </div>
+                            </div>
+                            <!-- 跳转的卡牌id -->
+                            <div class="jump">
+                                <label for="">跳转卡牌id:</label><input type="text">
+                            </div>
+                        </div>
+                        <!-- 添加右节点信息 -->
+                        <div class="right c">
+                            <div class="txt">右节点</div>
+                            <!--右节点选择的信息 -->
+                            <div class="choiceMsg">
+                                <textarea rows="4" cols="17" placeholder="左卡牌的抉择"></textarea>
+                            </div>
+                            <!-- 4个指标的变化 -->
+                            <div class="influence">
+                                <div class="i">
+                                    <label class="i1" for="">指标1:</label><input type="text" class="influence1">
+                                    <label class="i2" for="">指标2:</label><input type="text" class="influence2">
+                                </div>
+                                <div class="i">
+                                    <label class="i3" for="">指标3:</label><input type="text" class="influence3">
+                                    <label class="i4" for="">指标4:</label><input type="text" class="influence4">
+                                </div>
+                            </div>
+                            <!-- 跳转的卡牌id -->
+                            <div class="jump">
+                                <label for="">跳转卡牌id:</label><input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 确认或修改卡牌 -->
+                    <div class="accept">
+
+                    </div>
+                </div>
+                <!-- 判断是否为结局 -->
+                <div class="end">
+                    <img src="./images/end.png" alt="">
+                </div>
+                <div class="tip">
+                    <div class="closed">
+                        <img src="./images/close.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>确定把该节点设置为结局点嘛</span>
+                    </div>
+                    <div class="good1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 开始测试 -->
+        <div class="test">
+
+        </div>
+        <!-- 结局的选择 -->
+        <div class="endBig">
+
+        </div>
+        <!-- 返回创作 -->
+        <div class="create">
+
+        </div>
+        <!-- 结局的设计 -->
+        <div class="endOut">
+            <div class="endIn">
+                <div class="closed">
+                    <img src="./images/close.png" alt="">
+                </div>
+                <!-- 普通结局 -->
+                <div class="normal">
+                    <!-- 文字 -->
+                    <div class="txt">
+                        <span>普通结局</span>
+                    </div>
+                    <!-- 结局设置 -->
+                    <div class="set">
+                        <div class="zhi">
+                            <!-- 指标1  -->
+                            <div class="z z1">
+                                <label for="">指标1</label>
+                                <input class="pre" type="text">
+                                <input class="next" type="text">
+                            </div>
+                            <!-- 指标2 -->
+                            <div class="z z2">
+                                <label for="">指标2</label>
+                                <input class="pre" type="text">
+                                <input class="next" type="text">
+                            </div>
+                            <!-- 指标3 -->
+                            <div class="z z3">
+                                <label for="">指标3</label>
+                                <input class="pre" type="text">
+                                <input class="next" type="text">
+                            </div>
+                            <!-- 指标4 -->
+                            <div class="z z4">
+                                <label for="">指标4</label>
+                                <input class="pre" type="text">
+                                <input class="next" type="text">
+                            </div>
+                        </div>
+                        <!-- 结局1 -->
+                        <div class="end1">
+                            <div class="e11">
+                                结局1
+                            </div>
+                            <textarea class="e12"></textarea>
+                        </div>
+                        <!-- 结局2 -->
+                        <div class="end2">
+                            <div class="e21">
+                                结局2
+                            </div>
+                            <textarea class="e22"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- 特殊结局 -->
+                <div class="special">
+                    <!-- 文字 -->
+                    <div class="txt">
+                        <span>特殊结局</span>
+                    </div>
+                    <!-- 特殊结局列表 -->
+                    <div class="eList">
+                        <div class="headList">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <!-- 编号 -->
+                                        <td style="width: 55px; height: 28px; ">
+                                            <div>
+                                                <span>指标1</span>
+                                            </div>
+                                        </td>
+                                        <!-- 用户名 -->
+                                        <td style="width: 55px; height: 28px;">
+                                            <div>
+                                                <span>指标2</span>
+                                            </div>
+                                        </td>
+                                        <!-- 标题-->
+                                        <td style="width: 55px; height: 28px;">
+                                            <div>
+                                                <span>指标3</span>
+                                            </div>
+                                        </td>
+                                        <!-- 类别-->
+                                        <td style="width: 55px; height: 28px;">
+                                            <div>
+                                                <span>指标4</span>
+                                            </div>
+                                        </td>
+                                        <!-- 审核情况-->
+                                        <td style="width: 125px; height: 28px;">
+                                            <div>
+                                                <span>结局</span>
+                                            </div>
+                                        </td>
+                                        <td style="border-right: 0px; width: 45px; height: 28px;">
+                                            <div>
+                                                <span>删除</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bodyList">
+                            <table>
+                                <tbody>
+                                      
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- 新增和确认按钮 -->
+                        <div class="wait1">
+                            <div class="newOne">
+
+                            </div>
+
+                            <div class="goodOne">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/create.js"></script>
+</body>
+
+</html>

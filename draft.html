@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反诈通</title>
+    <link rel="stylesheet" href="./css/card/draft.css">
+    <link rel="stylesheet" href="./css/font/iconfont.css">
+    <link rel="stylesheet" href="./css/font1/iconfont.css">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+
+</head>
+
+<body>
+    <div class="draftOut">
+        <div class="tutorials">
+            
+        </div>
+        <div class="new">
+            <span>新手教程</span>
+        </div>
+        <!-- 最上面的总导航栏 -->
+        <div class="nav">
+            <!-- 最左边的logo -->
+            <div class="nav-outLogo">
+                <!-- logo内部盒子 -->
+                <div class="nav-inLogo">
+                    <!-- logo -->
+                    <div class="nav-logo iconfont icon-xitonganquan">
+
+                    </div>
+                    <!-- logo旁边的文字 -->
+                    <div class="nav-txt">
+                        <!-- 中文文字 -->
+                        <div class="CN">反诈通</div>
+                        <!-- 英文文字 -->
+                        <div class="EN">wing&nbsp;of&nbsp;anti-fraud</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 中间的导航栏 -->
+            <div class="nav-mid">
+                <ul>
+                    <!-- 帮助 -->
+                    <li>
+                        <a class="nax-tag" href="./index.html">首页</a>
+                    </li>
+                    <!-- 学习 -->
+                    <li>
+                        <!-- 标签 -->
+                        <a class="nax-tag" href="./game.html">模拟</a>
+                    </li>
+                    <!-- 百科 -->
+                    <li>
+                        <a class="nax-tag" href="./cyclopedias.html">百科</a>
+                    </li>
+                    <!-- 新闻 -->
+                    <li>
+                        <a class="nax-tag" href="./community.html">社区</a>
+                    </li>
+                    <!-- 这个元素来定义滑动的线条 -->
+                    <!-- <li class="underline"></li> -->
+                </ul>
+            </div>
+            <!-- 右边的个人中心 -->
+            <div class="navPreson">
+                <!-- 链接 -->
+                <a class="" href="./center.html">
+                    <div class="personH">
+                        <!-- ID -->
+                        <div class="personID">陈东楷</div>
+                        <!-- 头像 -->
+                        <div class="personHead">
+                            <div class="close">×</div>
+                            <img src="./images/chu.png" alt="">
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 信息 -->
+                <div class="message">
+                    <!-- 我的排行榜 -->
+                    <div class="m">
+                        <div class="mfont icon-gongnengpaihangbang iconfont"></div>
+                        <a class="mtxt">我的排行榜</a>
+                    </div>
+                    <!-- 我的错题集 -->
+                    <div class="m">
+                        <div class="mfont icon-xuexi_nor iconfont"></div>
+                        <a class="mtxt">我的错题集</a>
+                    </div>
+                    <!-- 关于反诈通 -->
+                    <div class="m">
+                        <div class="mfont icon-xitonganquan iconfont"></div>
+                        <a class="mtxt">关于反诈通</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 消息通知 -->
+            <div class="bell icon-lingsheng iconfont">
+
+            </div>
+        </div>
+        <!-- 消息框 -->
+        <div class="box">
+            <div class="closed">
+                <img src="./images/close.png" alt="">
+            </div>
+            <!-- 消息框 -->
+            <div class="kuang">
+                <div>
+                    <div class="m green">
+                        <div>
+                            <span>&nbsp;&nbsp;</span>
+                            <span>你们好</span>
+                            <span class="date">2023-11-15</span>
+                        </div>
+                    </div>
+
+                    <div class="m red">
+                        <div>
+                            <span>&nbsp;&nbsp;</span>
+                            <span>nihao</span>
+                            <span class="date">2023-11-15</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="editOut">
+            <div class="add">
+                <span>+</span>
+            </div>
+            <div class="txt">
+                <span>开始创作</span>
+            </div>
+        </div>
+        <div class="status">
+            <div class="s" data-id="0">
+                <span class="act">全部</span>
+            </div>
+            <div class="s" data-id="120">
+                <span>创作中</span>
+            </div>
+            <div class="s" data-id="140">
+                <span>审核中</span>
+            </div>
+            <div class="s" data-id="100">
+                <span>审核通过</span>
+            </div>
+            <div class="s" data-id="130">
+                <span>审核未通过</span>
+            </div>
+        </div>
+        <div class="editBox">
+
+        </div>
+        <!-- 草稿箱 -->
+        <div class="back">
+
+        </div>
+        <!-- 进行审核 -->
+        <div class="send">
+            <!-- 关闭按钮 -->
+            <div class="closed">
+                <img src="./images/close.png" alt="">
+            </div>
+            <!-- 文字 -->
+            <div class="txt">
+                <span>请选择你的类别</span>
+            </div>
+            <!-- 选项 -->
+            <div class="opt">
+                <div>
+                    <input type="radio" id="option1" name="option" value="telFraud">
+                    <label for="option1">电话诈骗</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="option2" name="option" value="wireFraud">
+                    <label for="option2">网络诈骗</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="option3" name="option" value="financialFraud">
+                    <label for="option3">金融诈骗</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="option4" name="option" value="overseasFraud">
+                    <label for="option4">境外诈骗</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="option5" name="option" value="cult">
+                    <label for="option5">邪教诈骗</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="option6" name="option" value="pyramidSale">
+                    <label for="option6">传销诈骗</label><br>
+                </div>
+
+            </div>
+            <!-- 确定按钮 -->
+            <div class="good">
+
+            </div>
+        </div>
+        <!-- 进行分享 -->
+        <div class="share">
+            <!-- 关闭按钮 -->
+            <div class="closed">
+                <img src="./images/close.png" alt="">
+            </div>
+            <!-- 确定提交嘛 -->
+            <div class="txt">
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;你确定分享此剧本到社区让大家看到嘛</span>
+            </div>
+            <div class="accept">
+                <img src="./images/a1.png" alt="">
+            </div>
+        </div>
+        <!-- 小红点 -->
+        <div class="point">
+            <span></span>
+        </div>
+    </div>
+    <script src="./js/card.js/draft.js"></script>
+</body>
+
+</html>

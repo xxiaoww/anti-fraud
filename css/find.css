@@ -1,0 +1,525 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.find {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/guanka.png);
+    background-size: 100% 100%;
+}
+
+.guanka {
+    height: 100vh;
+}
+
+.guanka>div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guanka>div>div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+
+.right {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 48%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.jiguan {
+    width: 100px;
+    height: 100px;
+    margin-left: 70px;
+    background-image: url(../images/lock.png);
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.jiguan:nth-of-type(1),
+.jiguan:nth-of-type(2),
+.jiguan:nth-of-type(3) {
+    background-image: url(../images/guanqia1.png);
+}
+
+.turn {
+    position: absolute;
+    top: 100px;
+    width: 80px;
+    height: 80px;
+    left: 50px;
+    transition: 0.5s;
+}
+
+.turn:hover {
+    transform: scale(80%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 第一关 */
+
+.first-gk,
+.second-gk,
+.third-gk {
+    display: none;
+    box-sizing: border-box;
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: #85a3c7;
+}
+
+.second-gk {
+    background-color: #5c7ba1;
+}
+
+.third-gk {
+    background-color: #ede6a1;
+}
+
+
+/* .second-tip {
+    display: none;
+} */
+
+.first-gk>div,
+.second-gk>div,
+.third-gk>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-bg,
+.second-bg,
+.third-bg {
+    position: relative;
+    width: 1500px;
+    height: 600px;
+    background-image: url(../images/first-ggk.png);
+    background-size: 100% 100%;
+}
+
+.second-bg {
+    background-image: url(../images/second-gk.png);
+}
+
+.third-bg {
+    background-image: url(../images/third-gk.png);
+}
+
+.first-bg>div:first-of-type,
+.second-bg>div:first-of-type,
+.third-bg>div:first-of-type {
+    position: relative;
+    width: 1500px;
+    height: 600px;
+}
+
+.first-bg>div:first-of-type>div,
+.second-bg>div:first-of-type>div,
+.third-bg>div:first-of-type>div {
+    position: absolute;
+}
+
+.second-bg>div:first-of-type>div img {
+    border-radius: 0;
+}
+
+.first-gk1 {
+    width: 70px;
+    height: 55px;
+    top: 160px;
+    left: 780px;
+}
+
+.first-gk2 {
+    width: 120px;
+    height: 87px;
+    top: 245px;
+    left: 468px;
+}
+
+.first-gk3 {
+    width: 65px;
+    height: 57px;
+    top: 182px;
+    left: 491px;
+}
+
+.first-gk4 {
+    width: 160px;
+    height: 110px;
+    top: 55px;
+    left: 710px;
+}
+
+.first-gk5 {
+    width: 138px;
+    height: 181px;
+    top: 116px;
+    left: 607px;
+}
+
+.first-gk6 {
+    width: 291px;
+    height: 206px;
+    top: 270px;
+    left: 696px;
+}
+
+.second-gk1 {
+    width: 141px;
+    height: 63px;
+    top: 281px;
+    left: 668px;
+}
+
+.second-gk2 {
+    width: 145px;
+    height: 59px;
+    top: 281px;
+    left: 441px;
+}
+
+.second-gk3 {
+    width: 127px;
+    height: 59px;
+    top: 281px;
+    left: 900px;
+}
+
+.second-gk4 {
+    width: 32px;
+    height: 16px;
+    top: 265px;
+    left: 338px;
+    transform: rotate(145deg);
+}
+
+.second-gk5 {
+    width: 72px;
+    height: 61px;
+    top: 123px;
+    left: 817px;
+}
+
+.second-gk6 {
+    width: 31px;
+    height: 41px;
+    top: 288px;
+    left: 1178px;
+    transform: rotate(60deg);
+}
+
+.third-gk1 {
+    width: 108px;
+    height: 90px;
+    top: 116px;
+    left: 1046px;
+    transform: rotate(3deg);
+}
+
+.third-gk2 {
+    width: 281px;
+    height: 203px;
+    top: 177px;
+    left: 621px;
+}
+
+.third-gk3 {
+    width: 98px;
+    height: 193px;
+    top: 296px;
+    left: 875px;
+}
+
+.third-gk4 {
+    width: 180px;
+    height: 132px;
+    top: 164px;
+    left: 411px;
+}
+
+.third-gk5 {
+    width: 62px;
+    height: 57px;
+    top: 313px;
+    left: 602px;
+    transform: rotate(-120deg);
+}
+
+.third-gk6 {
+    width: 203px;
+    height: 128px;
+    top: 346px;
+    left: 365px;
+}
+
+.turn1,
+.turn2,
+.turn3 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: -600px;
+    left: 100px;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.turn1:hover,
+.turn2:hover,
+.turn3:hover {
+    transform: scale(80%);
+}
+
+.find-tip,
+.find-jishi {
+    position: relative;
+    top: -175px;
+    left: 1200px;
+    width: 100px;
+    /* height: 100px; */
+}
+
+.find-jishi {
+    top: -278px;
+    left: 1300px;
+}
+
+.tishi,
+.jishi {
+    width: 80px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.daojishi,
+.tip-text {
+    margin-left: 25px;
+}
+
+.find-answer {
+    position: relative;
+    display: flex;
+    width: 1000px;
+    margin-top: -360px;
+    margin-left: 250px;
+}
+
+.find-answer div {
+    width: 80px;
+    height: 80px;
+    margin-left: 50px;
+    background-image: url(../images/answer1.png);
+    background-size: 100% 100%;
+}
+
+.first-tip,
+.second-tip,
+.third-tip {
+    position: fixed;
+    z-index: 800;
+    top: 200px;
+    left: 600px;
+    z-index: 800;
+}
+
+.first-tip>div,
+.second-tip>div,
+.third-tip>div {
+    position: fixed;
+    display: none;
+    z-index: 600;
+    width: 400px;
+    height: 400px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.first-tip .first-tip1 {
+    background-image: url(../images/first-tip1.png);
+}
+
+.first-tip .first-tip2 {
+    background-image: url(../images/first-tip2.png);
+}
+
+.first-tip .first-tip3 {
+    background-image: url(../images/first-tip3.png);
+}
+
+.first-tip .first-tip4 {
+    background-image: url(../images/first-tip4.png);
+}
+
+.first-tip .first-tip5 {
+    background-image: url(../images/first-tip5.png);
+}
+
+.first-tip .first-tip6 {
+    background-image: url(../images/first-tip6.png);
+}
+
+.second-tip .second-tip1 {
+    background-image: url(../images/second-tip1.png);
+}
+
+.second-tip .second-tip2 {
+    background-image: url(../images/second-tip2.png);
+}
+
+.second-tip .second-tip3 {
+    background-image: url(../images/second-tip3.png);
+}
+
+.second-tip .second-tip4 {
+    background-image: url(../images/second-tip4.png);
+}
+
+.second-tip .second-tip5 {
+    background-image: url(../images/second-tip5.png);
+}
+
+.second-tip .second-tip6 {
+    background-image: url(../images/second-tip6.png);
+}
+
+.third-tip .third-tip1 {
+    background-image: url(../images/third-tip1.png);
+}
+
+.third-tip .third-tip2 {
+    background-image: url(../images/third-tip2.png);
+}
+
+.third-tip .third-tip3 {
+    background-image: url(../images/third-tip3.png);
+}
+
+.third-tip .third-tip4 {
+    background-image: url(../images/third-tip4.png);
+}
+
+.third-tip .third-tip5 {
+    background-image: url(../images/third-tip5.png);
+}
+
+.third-tip .third-tip6 {
+    background-image: url(../images/third-tip6.png);
+}
+
+.first-tip>div>div,
+.second-tip>div>div,
+.third-tip>div>div {
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    float: right;
+    transition: all 0.5s;
+}
+
+.first-tip>div>div:hover,
+.second-tip>div>div:hover,
+.third-tip>div>div:hover {
+    transform: rotate(180deg);
+}
+
+.first-5,
+.first-6,
+.third-3,
+.third-6 {
+    display: none;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+}
+
+.third-3 {
+    top: -345px;
+    left: 975px;
+}
+
+.third-6 {
+    top: -361px;
+    left: 194px;
+}
+
+.first-5 {
+    top: -500px;
+    left: 700px;
+}
+
+.first-6 {
+    top: -400px;
+    left: 900px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.tongguan {
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 200px;
+    left: 500px;
+}
+
+.tongguan>div:first-of-type {
+    width: 500px;
+    height: 400px;
+}
+
+.tong-sure {
+    width: 80px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    color: #000;
+    border-radius: 0 0 10px 10px;
+    border: 2px solid #000;
+    background-color: rgb(164, 208, 227);
+    margin-left: 200px;
+}
